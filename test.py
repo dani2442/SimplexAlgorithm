@@ -62,10 +62,20 @@ print(P.Get_Coste_Funcion())
 
 #P.Add_Variable([1,1],-2)
 
-P.Add_Restriccion([-3,-5,3,0,0],-10,-1)
+#P.Add_Restriccion([-3,-5,3,0,0],-10,-1)
 
 print(P.Is_Optimizado())
 #P.Solve_Primal()
 P.Solve_Dual()
 print(P.Get_Solucion())
 print(P.Get_Coste_Funcion())
+
+A=[[2,3,1],[4,1,2],[3,4,2]]
+b=[5,11,8]
+c=[-5,-4,-3]
+signos=[-1,-1,-1]
+fun=min
+
+P = Problema(A,b,c,signos,fun)
+P.Solve_Primal()
+print(P)
