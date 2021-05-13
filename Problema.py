@@ -20,12 +20,12 @@ class Problema(object):
     def __str__(self):
         cad="\t|"
         for i in range(len(self.A[0])):
-            cad+=str(i)+"\t"
+            cad+="x_"+str(i)+"\t"
         cad+="\n"
  
         for i in range(len(self.A)):
             if self.indices_variables!=[]:
-                cad+=str(self.indices_variables[i])
+                cad+="x_"+str(self.indices_variables[i])
             cad+="\t|"
             for j in range(len(self.A[0])):
                 cad+=str(self.A[i,j])+"\t"
