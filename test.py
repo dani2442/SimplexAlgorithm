@@ -45,8 +45,15 @@ c=[1,-3,-1]
 signos=[0,0]
 fun=min
 
+A=[[-2,-1,-1,-1,1,0,0],[4,-2,5,1,0,1,0],[-4,1,-3,-1,0,0,1]]
+b=[-9,8,-5]
+c=[34,5,19,9,0,0,0]
+signos=[0,0,0]
+fun=min
+
 P = Problema(A,b,c,signos,fun)
-P.Solve_Primal()
+#P.Solve_Primal()
+P.Solve_Dual()
 print(P.Get_Solucion())
 #print(P)
 #print(P.Is_Optimizado())

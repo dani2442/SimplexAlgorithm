@@ -51,7 +51,8 @@ class Problema(object):
 
     def Solve_Dual(self):
         if self.indices_base==[]:
-            pass ############## TODO ###############
+            indices=[i for i in range(len(self.A[0])-len(self.A),len(self.A[0]))]
+            self.A,self.b,self.solucion,self.indices_variables=simplex_dual(self.A,self.b,self.c,indices,self.fun)
         else:
             self.A,self.b,self.solucion,self.indices_variables=simplex_dual(self.A,self.b,self.c,self.indices_variables,self.fun,self.indices_no_usa)
 
